@@ -5,8 +5,8 @@
 	<version>0.4</version>
 	<scm>
 		<url>https://github.com/sanderv32/maven_test</url>
-		<connection>scm:git:git@github.com/sanderv32/maven_test.git</connection>
-		<developerConnection>scm:git:git@github.com/sanderv32/maven_test.git</developerConnection>
+		<connection>scm:git:git@github.com:sanderv32/maven_test.git</connection>
+		<developerConnection>scm:git:git@github.com:sanderv32/maven_test.git</developerConnection>
       <tag>v${releaseVersion}</tag>
   </scm>
 	
