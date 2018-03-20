@@ -11,13 +11,6 @@
   </scm>
 	
 	<!-- Repository Information -->
-	<distributionManagement>
-		<repository>
-			<id>nexus-releases</id>
-			<!-- http://localhost:8081/repository/<repository-name> -->
-			<url>http://localhost:8081/repository/api-release</url>
-		</repository>
-	</distributionManagement>
 	<profiles>
 		<profile>
 			<id>test</id>
@@ -63,11 +56,6 @@
 								</goals>
 							</execution>
 						</executions>
-						<configuration>
-							<serverId>nexus-releases</serverId>
-							<nexusUrl>http://localhost:8081/</nexusUrl>
-							<skipStaging>true</skipStaging>
-						</configuration>
 					</plugin>
 				</plugins>
 			</build>
@@ -95,8 +83,28 @@
 						<version>1.8.1</version>
 					</dependency>
 				</dependencies>
-			</plugin>
-		</plugins>
+            </plugin>
+            <plugin>
+                <groupId>de.jutzig</groupId>
+                <artifactId>github-release-plugin</artifactId>
+                <version>1.1.1</version>
+                <configuration>
+                    <description>Description of your release</description>
+                    <releaseName>1.0 Final</releaseName>
+                    <tag>${project.version}</tag>
+
+                    <fileSets>
+                      <fileSet>
+                        <directory>${project.build.directory}</directory>
+                        <includes>
+                            <include>${project.artifactId}*.tar.gz</include>
+                            <include>${project.artifactId}*.zip</include>
+                        </includes>
+                      </fileSet>
+                    </fileSets>
+                </configuration>
+            </plugin>
+		  </plugins>
 		 </pluginManagement>
 	</build>
 </project>
