@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.test</groupId>
 	<artifactId>maven-release-plugin-example</artifactId>
-	<version>0.10-SNAPSHOT</version>
+	<version>0.11-SNAPSHOT</version>
 	<scm>
 		<url>https://github.com/sanderv32/maven_test</url>
 		<connection>scm:git:git@github.com:sanderv32/maven_test.git</connection>
@@ -65,5 +65,12 @@
             </plugin>
 	  </plugins>
 	 </pluginManagement>
-	</build>
+ </build>
+ <distributionManagement>
+    <repository>
+      <id>local-repo</id>
+      <name>Local Test Repo</name>
+      <url>file:///tmp/repo</url>
+    </repository>
+  </distributionManagement>
 </project>
