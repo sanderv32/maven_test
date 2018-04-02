@@ -41,7 +41,8 @@
 		</profile>
 	</profiles>
 	<build>
-	 <pluginManagement>
+	<pluginManagement>
+	 <plugins>
             <plugin>
                 <groupId>de.jutzig</groupId>
                 <artifactId>github-release-plugin</artifactId>
@@ -62,7 +63,7 @@
                     </fileSets>
                 </configuration>
             </plugin>
-		  </plugins>
-		 </pluginManagement>
+	  </plugins>
+	 </pluginManagement>
 	</build>
 </project>
