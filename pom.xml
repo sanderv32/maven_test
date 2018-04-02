@@ -2,12 +2,12 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.test</groupId>
   <artifactId>maven-release-plugin-example</artifactId>
-  <version>0.15</version>
+  <version>0.16-SNAPSHOT</version>
   <scm>
     <url>https://github.com/sanderv32/maven_test</url>
     <connection>scm:git:git@github.com:sanderv32/maven_test.git</connection>
     <developerConnection>scm:git:git@github.com:sanderv32/maven_test.git</developerConnection>
-    <tag>v0.15-SNAPSHOT</tag>
+    <tag>1.0-SNAPSHOT</tag>
   </scm>
 
   <!-- Repository Information -->
