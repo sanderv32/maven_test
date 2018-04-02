@@ -66,7 +66,15 @@
             <plugin>
                 <groupId>de.jutzig</groupId>
                 <artifactId>github-release-plugin</artifactId>
-                <version>1.1.1</version>
+		<version>1.1.1</version>
+		<executions>
+				<execution>
+				<id>github-upload</id>
+				  <phase>deploy</phase>
+				  <goals>
+				    <goal>release</goal>
+				  </goals>
+			    <inherited>false</inherited>
                 <configuration>
                     <description>Description of your release</description>
                     <releaseName>1.0 Final</releaseName>
@@ -81,7 +89,9 @@
                         </includes>
                       </fileSet>
                     </fileSets>
-                </configuration>
+				  </configuration>
+				</execution>
+    		</executions>
             </plugin>
 	  </plugins>
 	 </pluginManagement>
