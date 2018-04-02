@@ -29,8 +29,8 @@
                 </goals>
                 <inherited>false</inherited>
                 <configuration>
-                  <description>Description of your release</description>
-                  <releaseName>1.0 Final</releaseName>
+                  <description>**Merged pull requests:**</description>
+                  <releaseName>${project.artifactId}-${project.version}</releaseName>
                   <tag>${project.version}</tag>
 
                   <fileSets>
